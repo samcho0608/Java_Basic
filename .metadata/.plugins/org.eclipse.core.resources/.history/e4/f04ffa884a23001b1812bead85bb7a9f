@@ -1,0 +1,21 @@
+package exception;
+
+// ¿À·ù:
+// ¤¤> 1. Error: Systematic Error(Hardware / syntax error)
+// ¤¤> 2. Exception: Error of the programmer -> can be prevented by the programmer
+
+// Exception Control: Proactively preventing possible exceptions from occurring.
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		try {	// try: keyword used to cover the part of the code that may cause an exception
+			System.out.println(4/0);
+		}
+		catch(ArithmeticException error) {
+			error.printStack();
+		}
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package exception;
+
+import java.util.*;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int[] arr = new int[5];
+		
+		try{
+			System.out.print("정수 입력: ");
+			arr[1] = sc.nextInt();
+		}
+		catch(InputMismatchException e) {
+			System.out.println(e.getMessage() + "예외 발생");
+		}
+		
+		sc.close();
+	}
+
+}

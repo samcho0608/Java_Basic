@@ -1,0 +1,46 @@
+package _interface;
+
+interface USB {	// used to give a class a certain characteristic
+	// variables within an interface attains
+	// public static final
+	String type = "C타입";
+	
+	// methods within an interface attains
+	// public abstract
+	void connect();
+}
+
+class ElectricFan implements USB{
+	ElectricFan(){
+		
+	}
+	
+	@Override
+	public void connect() {
+		// TODO Auto-generated method stub
+		
+	}
+}
+
+class SmartPhone implements USB{
+	@Override
+	public void connect() {
+		System.out.println("iPhone 연결, 64GB, 아이튠즈 실행!");	
+	}
+}
+
+class FlashMemory implements USB{
+	@Override
+	public void connect() {
+		System.out.println("USB 메모리 연결, 탐색기 G:\\ 연결");
+	}
+}
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

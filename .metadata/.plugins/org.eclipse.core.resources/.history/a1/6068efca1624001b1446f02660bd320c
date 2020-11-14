@@ -1,0 +1,11 @@
+package api;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		// Wrapper Class
+		
+		
+	}
+
+}

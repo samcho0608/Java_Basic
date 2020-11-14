@@ -1,0 +1,25 @@
+package _abstract;
+
+class Animal {
+	String name;
+	int age;
+	String type;
+	
+	Animal(String name, int age, String type) {
+		this.name = name;
+		this.age = age;
+		this.type = type;
+	}
+	
+	void eat() { System.out.println("Eat food"); }
+	void sleep() { System.out.println("Sleep"); }
+}
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

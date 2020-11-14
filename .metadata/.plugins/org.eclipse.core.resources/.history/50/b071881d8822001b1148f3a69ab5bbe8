@@ -1,0 +1,24 @@
+package _interface;
+
+interface Fly {
+	void flying();
+}
+
+abstract class Human{
+	String name;
+	int age;
+	
+	abstract void sleep();
+}
+
+// the two above cannot create an instance
+
+public class Ex03 {
+	
+	Human man = new Human() {
+		void sleep() {
+			System.out.println("ÄðÄð");
+		}
+	}
+
+}

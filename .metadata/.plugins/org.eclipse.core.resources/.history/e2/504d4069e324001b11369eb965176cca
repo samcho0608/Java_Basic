@@ -1,0 +1,24 @@
+package collection;
+
+import java.util.HashMap;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		// Map takes a pair of key and value for data storage
+		// If list used index to get data, Map uses Key to get data
+		
+		// ex) List
+		// 0		1		2		3
+		// 全辨悼		15		172.1	何魂
+		
+		
+		// ex) Map
+		// name		age		height	address
+		// 全辨悼		15		172.1	何魂
+		
+		HashMap<K, V>
+
+	}
+
+}

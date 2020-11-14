@@ -1,0 +1,54 @@
+package last;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Control { // class actually controlling student class
+	private LinkedList<Student> members = new LinkedList<Student>();
+	Scanner sc = new Scanner(System.in);
+	
+	void add() {
+		String name;
+		int kor, eng, mat;
+		System.out.print("이름: ");
+		name = sc.next();
+		System.out.print("국어: ");
+		kor = sc.nextInt();
+		System.out.print("영어: ");
+		eng = sc.nextInt();
+		System.out.print("수학: ");
+		mat = sc.nextInt();
+		
+		members.add(new Student(name, kor, eng, mat));
+	}
+
+	boolean remove(String target) {
+		for(Student s : members) {
+			if(s.getName().equals(target)) {
+				members.remove(s);
+				return true;
+			}
+		}
+		return false;
+	}	
+	
+	void list() {
+		System.out.println("========================");
+		System.out.println("=         리스트                    =");
+		System.out.println("========================");
+		for(Student s : members)
+			System.out.println(s.getName());
+	}
+	
+	void search(String target) {
+		for(Student s : members) {
+			if(s.getName().equals(target)) {
+				System.out.println("해당 학생을 찾았습니다!\n");
+				s.showInfo();
+				return;
+			}
+		}
+		System.out.println("해당 학생은 존재하지 않습니다!\n");
+	}
+	
+}

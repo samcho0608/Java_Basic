@@ -1,0 +1,28 @@
+package api;
+
+import java.util.Random;
+
+class Lotto{
+	// rule 1 : 1~45
+	// rule 2 : no repeated number
+	// rule 3 : the result announced in an increasing order
+	// rule 4 : 6 numbers
+	private int num[];
+	
+	void run() {
+		Random ran = new Random();
+//		num = ran.
+	}
+	
+}
+
+public class Quiz {
+
+	public static void main(String[] args) {
+		Lotto lotto = new Lotto();
+		
+		Lotto.run();	// 로또 실행
+
+	}
+
+}

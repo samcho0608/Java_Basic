@@ -1,0 +1,21 @@
+package last;
+
+public class Student { // stores the student info
+	String name;
+	int kor, eng, mat, sum;
+	double avg;
+	
+	Student(String name, int kor, int eng, int mat){
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.mat = mat;
+		sum = kor + eng + mat;
+		avg = sum * 100 / 3 / 100.;
+	}
+	
+	String getName() {
+		return name;
+	}
+
+}

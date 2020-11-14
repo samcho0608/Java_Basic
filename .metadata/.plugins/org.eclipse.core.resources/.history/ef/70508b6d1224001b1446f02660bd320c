@@ -1,0 +1,22 @@
+package api;
+
+class Test{
+	
+}
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		System.out.println();
+		
+		Test test = new Test();
+		Class cl = test.getClass();
+		
+		System.out.println(cl);
+		System.out.println(cl.getName());
+		
+		System.out.println(test.getClass().getName());
+		
+	}
+
+}

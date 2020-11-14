@@ -1,0 +1,26 @@
+package _interface;
+
+interface USB {	// used to give a class a certain characteristic
+	// variables within an interface attains
+	// public static final character
+	String type = "C≈∏¿‘";
+	
+	// methods within an interface attains
+	// public abstract character
+	void run();
+}
+
+class ElectricFan implements USB{
+	ElectricFan(){
+		
+	}
+}
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

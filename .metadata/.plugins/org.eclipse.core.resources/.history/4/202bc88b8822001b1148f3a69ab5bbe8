@@ -1,0 +1,6 @@
+package _interface;
+
+// Function Interface: Interface with only one method
+public interface Slash {
+	void slash();
+}

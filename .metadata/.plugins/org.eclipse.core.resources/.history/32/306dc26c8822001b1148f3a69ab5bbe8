@@ -1,0 +1,16 @@
+package _interface;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		Slash sl = new Slash() {
+			
+			@Override
+			public void slash() {
+				System.out.println("Ä®·Î º£´Ù.");
+			}
+		};
+
+	}
+
+}

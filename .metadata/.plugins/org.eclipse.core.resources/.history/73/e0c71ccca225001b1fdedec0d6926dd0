@@ -1,0 +1,11 @@
+package fileIO;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// File Output: writing data onto file
+		// File Input: reading data from file
+
+	}
+
+}

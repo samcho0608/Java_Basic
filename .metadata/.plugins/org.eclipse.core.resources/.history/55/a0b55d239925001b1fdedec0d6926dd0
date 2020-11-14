@@ -1,0 +1,9 @@
+package last;
+
+import java.util.LinkedList;
+
+public class Control { // class actually controlling student class
+	LinkedList<Student> members = new LinkedList<Student>();
+	
+	
+}

@@ -1,0 +1,37 @@
+package nestedClass;
+
+// nested class: creating a class within a class
+
+class Outer{
+	private int out = 10;
+	Inner inObj = new Inner();	// Inner class instance created within the outer class.
+	
+	void showOut() {
+		System.out.println("¿ÜºÎ ¸â¹ö : " + out);
+	}
+	
+	class Inner{
+		private int in = 20;
+		
+		void showIn() {
+			System.out.println("¿ÜºÎ ¸â¹ö: " + out);	// Inner class can use the outer class
+			System.out.println("³»ºÎ ¸â¹ö: " + in);		// However the other way doesn't work so inner class'
+													// variables should only be used within the inner class.
+		}
+	}
+	
+}
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		Outer outObj = new Outer();
+		
+		outObj.inObj.showIn();
+		outObj.showOut();
+		
+		Outer.Inner in = outObj.new Inner(); // how to create an instance of the inner class
+
+	}
+
+}

@@ -1,0 +1,89 @@
+package api;
+
+import java.util.Arrays;
+import java.util.Random;
+
+class Lotto{
+	// rule 1 : 1~45
+	// rule 2 : no repeated number
+	// rule 3 : the result announced in an increasing order
+	// rule 4 : 6 numbers
+	private int num[] = new int[6];
+	
+	int[] getNum() {
+		return num;
+	}
+	
+	void run() {
+		Random ran = new Random();
+		int n;
+		OUTER:
+		for(int i = 0; i < num.length; i++) {
+			n = ran.nextInt(45) + 1;
+			for(int j = 0; j <= i; j++)	// if repeated, rechoose a random integer
+				if(num[j] == n) {
+					i--;
+					continue OUTER;
+				}
+			num[i] = n;
+		}
+		sort();							// do a selection sort using the sort function
+		
+	}
+	
+	void sort() {
+		int temp;
+		for(int i = 0; i < num.length; i++) {
+			for(int j = i + 1; j < num.length; j++) {
+				if(num[j] < num[i]) {
+					temp = num[j];
+					num[j] = num[i];
+					num[i] = temp;
+				}
+			}
+				
+		}
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		int[] targetArray = ((Lotto)obj).getNum();
+		for(int i = 0; i < num.length; i++)
+			if(num[i] != targetArray[i])
+				return false;
+		return true;
+	}
+	
+	@Override
+	public String toString() {
+		String strVal = "";
+		for(int i : num)
+			strVal = strVal + i + " ";
+		
+		return strVal;
+	}
+	
+	
+}
+
+public class Quiz {
+
+	public static void main(String[] args) {
+		Lotto lotto = new Lotto();
+		Lotto ticket;
+		
+		lotto.run();	// 로또 실행
+		System.out.println(lotto);
+		
+		boolean matched = false;
+		while(!matched) {
+			ticket = new Lotto();
+			matched = lotto.equals(ticket);
+			System.out.println(ticket);
+		}
+
+	}
+
+}

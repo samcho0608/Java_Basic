@@ -1,0 +1,39 @@
+package last;
+
+import java.util.LinkedList;
+
+public class Control { // class actually controlling student class
+	LinkedList<Student> members = new LinkedList<Student>();
+	
+	void add(Student target) {
+		members.add(target);
+	}
+
+	boolean remove(String target) {
+		for(Student s : members) {
+			if(s.getName().equals(target)) {
+				members.remove(s);
+				return true;
+			}
+		}
+		
+		return false;
+	}	
+	
+	void list() {
+		for(Student s : members)
+			System.out.println(s.getName());
+	}
+	
+	void search(String target) {
+		for(Student s : members) {
+			if(s.getName().equals(target)) {
+				System.out.println("해당 학생을 찾았습니다!\n");
+				s.showInfo();
+				return;
+			}
+		}
+		System.out.println("해당 학생은 존재하지 않습니다!\n");
+	}
+	
+}

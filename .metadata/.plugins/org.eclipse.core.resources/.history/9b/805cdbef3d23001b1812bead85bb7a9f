@@ -1,0 +1,30 @@
+package nestedClass;
+
+// nested class: creating a class within a class
+
+class Outer{
+	private int out = 10;
+	
+	void showOut() {
+		System.out.println("¿ÜºÎ ¸â¹ö : " + out);
+	}
+	
+	class Inner{
+		private int in = 20;
+		
+		void showIn() {
+			System.out.println("¿ÜºÎ ¸â¹ö: " + out);	// inner class can use the outer class
+			System.out.println("³»ºÎ ¸â¹ö: " + in);		// however the other way doesn't work so inner class'
+													// variables should only be used within the inner class.
+		}
+	}
+}
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

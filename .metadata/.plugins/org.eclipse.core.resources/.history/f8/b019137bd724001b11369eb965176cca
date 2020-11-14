@@ -1,0 +1,19 @@
+package collection;
+
+// Collection Framework
+
+// Thanks to structured tools:
+// 	- development time is reduced
+// 	- can write a consistent program
+
+// 3 interfaces of collection framework
+// Collection : List, Set, Map
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

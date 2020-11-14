@@ -1,0 +1,27 @@
+package _interface;
+
+// interface : the only form t hat allows multi-inheritance in java
+// ¤¤> a type of abstract class
+// ¤¤> uses the "implements" keyword to inherit
+
+// In java, a child class can have only one parent class
+
+interface Jumpable{
+	
+}
+
+abstract class Animal{
+	String name;
+	Animal(String name) { this.name = name; }
+	
+	abstract void speak();
+	abstract void eat();
+}
+
+class Cat extends Animal implements Jumpable{
+	
+}
+
+public class Ex01 {
+
+}

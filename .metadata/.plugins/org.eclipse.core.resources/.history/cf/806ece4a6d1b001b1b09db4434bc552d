@@ -1,0 +1,92 @@
+
+public class practice01 {
+
+	public static void main(String[] args) {
+		
+//		1. Fill up 8x8 2D array with numbers 1~64
+		int[][] arr = new int[8][8];
+		
+		int num = 1;
+		for(int i = 0; i < arr.length; i++)
+			for(int j = 0; j < arr[0].length;j++)
+				arr[i][j] = num++;
+		
+		for(int[] row : arr) {
+			for(int val: row)
+				System.out.print((val < 10) ? " " + val + " " : val + " ");
+			System.out.println();
+		}
+		
+		
+		System.out.println();
+		
+		
+//		2. 1. transpose
+		
+		num = 1;
+		for(int j = 0; j < arr.length; j++)
+			for(int i = 0; i < arr[0].length; i++)
+				arr[i][j] = num++;
+		
+		for(int[] row : arr) {
+			for(int val: row)
+				System.out.print((val < 10) ? " " + val + " " : val + " ");
+			System.out.println();
+		}
+		
+		System.out.println();
+		
+//		3. 달팽이  
+//		아직 다 못함
+
+		
+		for(int j = 0; j < arr.length; j++)
+			for(int i = 0; i < arr[0].length; i++)
+				arr[i][j] = 0;
+		
+		int i,j, rLimit, cLimit, rDelta, cDelta, change;
+		i = 0;
+		j = change = 1;
+		rDelta = cDelta = 1;
+		rLimit = arr.length-1;
+		cLimit = arr[0].length + 1;
+		num = 1;
+		boolean alongRow = true;
+		
+		arr[i][0] = num++;
+		change++;
+				
+		while(num <= arr.length * arr[0].length) {
+			if(alongRow) {
+				for(; change < cLimit ; j+= cDelta) {
+					arr[i][j] = num++;
+					change++;
+				}
+				j -= cDelta;
+				i += rDelta;
+				cLimit--;
+				cDelta = -cDelta;
+			}
+			else {
+				for(; change < rLimit; i+= rDelta) {
+					arr[i][j] = num++;
+					change++;
+				}
+				i -= rDelta;
+				j += cDelta;
+				rLimit--;
+				rDelta = -rDelta;
+			}
+			change = 0;
+			alongRow = !alongRow;
+
+		}
+
+		for(int[] r : arr) {
+			for(int val: r)
+				System.out.print((val < 10) ? " " + val + " " : val + " ");
+			System.out.println();
+		}
+		
+	}
+}

@@ -1,0 +1,31 @@
+package _abstract;
+
+class Dog extends Animal {
+
+	Dog(String name, int age, String type) {
+		super(name, age, type);
+	}
+	
+}
+
+class Hamster extends Animal {
+	Hamster(String name, int age, String type) {
+		super(name, age, type);
+	}
+}
+
+class Rabbit extends Animal {
+	Rabbit(String name, int age, String type) {
+		super(name, age, type);
+	}
+}
+
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package polymorphism;
+
+class Animal{
+	
+	void sleep() {
+		System.out.println("Zzzz...");
+	}
+	
+	void eat() {
+		System.out.println("³È³È");
+	}
+	
+	void speak() {
+		System.out.println("±×¸£¸£...");
+	}
+}
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

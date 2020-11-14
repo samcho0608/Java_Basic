@@ -1,0 +1,33 @@
+package collection;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		HashSet<Integer> hs = new HashSet<Integer>();
+		
+		hs.add(10);
+		hs.add(10);
+		hs.add(20);
+		hs.add(30);
+		hs.add(40);
+		
+		System.out.println(hs);
+
+//		hs.get(0); HashSet got no order == HashSet has no index
+		
+		// How to get the values?
+		// 1. iterator
+		// 2. for-each loop
+		
+		Iterator<Integer> it = hs.iterator();
+//							  HashSet의 앞에 커서를 놓고 그걸 반환
+		
+		System.out.println(it.hasNext());
+		System.out.println(it.next());	// move the cursor to the next position and return the value there
+		
+	}
+
+}

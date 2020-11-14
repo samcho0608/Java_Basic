@@ -1,0 +1,45 @@
+package _abstract;
+
+class Dog extends Animal {
+
+	Dog(String name, int age, String type) {
+		super(name, age, type);
+	}
+	
+	@Override
+	void eat() {
+		System.out.println("»À´Ù±Í¸¦ ¾Ã´Â´Ù.");
+	}
+}
+
+class Hamster extends Animal {
+	Hamster(String name, int age, String type) {
+		super(name, age, type);
+	}
+	
+	@Override
+	void eat() {
+		System.out.println("ÇØ¹Ù¶ó±â¾¾¸¦ ¸Ô´Â´Ù, ¿È‡œ‡œ");
+	}
+}
+
+class Rabbit extends Animal {
+	Rabbit(String name, int age, String type) {
+		super(name, age, type);
+	}
+	
+	@Override
+	void eat() {
+		System.out.println("´ç±ÙÀ» ¸Ô´Â´Ù.");
+	}
+}
+
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		Cat cat = new Cat("°í¾çÀÌ", 1, "¸ÕÄ¡Å²");
+
+	}
+
+}

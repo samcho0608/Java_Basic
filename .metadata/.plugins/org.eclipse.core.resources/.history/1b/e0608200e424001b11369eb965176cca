@@ -1,0 +1,35 @@
+package collection;
+
+import java.util.HashMap;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		// Map takes a pair of key and value for data storage
+		// If list used index to get data, Map uses Key to get data
+		
+		// ex) List
+		// 0		1		2		3
+		// 全辨悼		15		172.1	何魂
+		
+		
+		// ex) Map
+		// name		age		height	address
+		// 全辨悼		15		172.1	何魂
+		
+		HashMap<String, String> hm = new HashMap<String, String>();
+		//	   < Key,	Value >
+		// Key is value only used to access Value => has to be unique
+		// Value is the actually stored data => doesn't have to be unique
+		
+		hm.put("Name", "全辨悼");
+		hm.put("Name", "17");
+		hm.put("Name", "172.1");
+		hm.put("Name", "何魂");
+		
+		System.out.println(hm);
+		
+
+	}
+
+}

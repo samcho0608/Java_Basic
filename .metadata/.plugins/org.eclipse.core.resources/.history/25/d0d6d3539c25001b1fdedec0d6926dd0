@@ -1,0 +1,69 @@
+package last;
+
+import java.util.Scanner;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		Control stuCon = new Control();
+		
+		int menu;
+		
+		do {
+			System.out.println("=== 학생 관리 ===");
+			System.out.println("1. 학생 추가");
+			System.out.println("2. 학생 목록");
+			System.out.println("3. 학생 검색");
+			System.out.println("4. 학생 삭제");
+			System.out.println("5. 저장");
+			System.out.println("6. 불러오기");
+			System.out.println("0. 프로그램 종료");
+			System.out.print(">>>");
+			menu = sc.nextInt();
+			
+			switch(menu) {
+			case 1: // add
+				String name;
+				int kor, eng, mat;
+				System.out.print("이름: ");
+				name = sc.next();
+				System.out.println("국어: ");
+				kor = sc.nextInt();
+				System.out.println("영어: ");
+				eng = sc.nextInt();
+				System.out.println("수학: ");
+				mat = sc.nextInt();
+				
+				stuCon.add(new Student(name, kor, eng, mat));
+				break;
+			case 2:	// list
+				stuCon.list();
+				break;
+			case 3:	// search
+				System.out.println("이름: ");
+				if(stuCon.search(sc.next()))
+					System.out.println("해당 학생을 찾았습니다!");
+				else
+					System.out.println("해당 학생은 존재하지 않습니다!\n");
+				break;
+			case 4:	// remove
+				System.out.print("이름: ");
+				if(stuCon.remove(sc.next()))
+					System.out.println("제거 완료!\n");
+				else
+					System.out.println("해당 학생은 존재하지 않습니다!\n");
+				break;
+			case 5:
+			case 6:
+			case 0:
+			default:
+				System.out.println("없는 번호입니다.");
+			}
+		}while(menu != 0);
+		
+		sc.close();
+	}
+
+}

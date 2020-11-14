@@ -1,0 +1,28 @@
+package last;
+
+import java.util.Scanner;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int menu;
+		
+		do {
+			System.out.println("=== 학생 관리 ===");
+			System.out.println("1. 학생 추가");
+			System.out.println("2. 학생 추가");
+			System.out.println("3. 학생 추가");
+			System.out.println("4. 학생 추가");
+			System.out.println("5. 학생 추가");
+			System.out.println("6. 학생 추가");
+			System.out.println("0. 학생 추가");
+			System.out.println(">>>");
+			menu = sc.nextInt();
+		}while(menu != 0);
+		
+		sc.close();
+	}
+
+}

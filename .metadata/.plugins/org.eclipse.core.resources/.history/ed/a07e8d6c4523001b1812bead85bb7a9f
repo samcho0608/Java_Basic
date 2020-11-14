@@ -1,0 +1,10 @@
+package nestedClass;
+
+public class Person {
+	String name;
+	int age;
+	
+	class Heart {
+		
+	}
+}

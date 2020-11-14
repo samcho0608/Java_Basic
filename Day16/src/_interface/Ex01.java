@@ -1,0 +1,73 @@
+package _interface;
+
+// interface : the only form t hat allows multi-inheritance in java
+// ¤¤> a type of abstract class
+// ¤¤> uses the "implements" keyword to inherit
+
+// In java, a child class can have only one parent class
+
+interface Jumpable{
+	void jump(); // atomatically attains the public abstract character
+}
+
+abstract class Animal{
+	String name;
+	Animal(String name) { this.name = name; }
+	
+	abstract void speak();
+	abstract void eat();
+}
+
+class Cat extends Animal implements Jumpable{
+	
+	Cat(String name){
+		super(name);
+	}
+	
+	@Override
+	void speak() {
+		System.out.println("³Ä¿Ë");
+	}
+	
+	@Override
+	void eat() {
+		System.out.println("¾Æ Ãò¸£ ¶¯±â³×");
+	}
+
+	@Override
+	public void jump() {
+		System.out.println("±ªÀÌ Á¡ÇÁ");
+	}
+}
+
+class Pig extends Animal{	// doesn't inherit jumpable
+	Pig(String name){ super(name); }
+	
+	@Override
+	void speak() { System.out.println("²Ü²Ü"); }
+	
+	@Override
+	void eat() { System.out.println("¾Æ¹«°Å³ª ¤£");}
+}
+
+public class Ex01 {
+	public static void main(String[] args) {
+		Cat cat = new Cat("°í¾çÀÌ");
+		Pig pig = new Pig("µÅÁö");
+		
+		if ( pig instanceof Jumpable ) {
+			System.out.println("°¡´É~");
+		}
+		
+		else {
+			System.out.println("ºÒ°¡´É~");
+		}
+		
+//		Jumpable jp = new Jumpable();
+//		can't create an instance bc it's a type of abstract class
+		
+		Jumpable jp = cat;
+		
+		jp.jump();
+	}
+}

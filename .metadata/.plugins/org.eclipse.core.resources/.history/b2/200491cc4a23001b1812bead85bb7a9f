@@ -1,0 +1,23 @@
+package exception;
+
+// 오류:
+// ㄴ> 1. Error: Systematic Error(Hardware / syntax error)
+// ㄴ> 2. Exception: Error of the programmer -> can be prevented by the programmer
+
+// Exception Control: Proactively preventing possible exceptions from occurring.
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		try {	// try: keyword used to cover the part of the code that may cause an exception
+			System.out.println(4/0);
+		}
+		catch(ArithmeticException error) {
+//			error.printStackTrace(); default error message
+			System.out.println(error.getMessage());
+			System.err.println("0으로 나누면 안돼요");
+		}
+
+	}
+
+}

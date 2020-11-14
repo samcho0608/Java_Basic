@@ -1,0 +1,53 @@
+package last;
+
+import java.util.Scanner;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		Control stuCon = new Control();
+		
+		int menu;
+		
+		do {
+			System.out.println("=== 학생 관리 ===");
+			System.out.println("1. 학생 추가");
+			System.out.println("2. 학생 목록");
+			System.out.println("3. 학생 검색");
+			System.out.println("4. 학생 삭제");
+			System.out.println("5. 저장");
+			System.out.println("6. 불러오기");
+			System.out.println("0. 프로그램 종료");
+			System.out.println(">>>");
+			menu = sc.nextInt();
+			
+			switch(menu) {
+			case 1:
+				String name;
+				int kor, eng, mat;
+				System.out.print("이름: ");
+				name = sc.nextLine();
+				System.out.println("국어: ");
+				kor = sc.nextInt();
+				System.out.println("영어: ");
+				eng = sc.nextInt();
+				System.out.println("수학: ");
+				mat = sc.nextInt();
+				
+				stuCon.add(new Student(name, kor, eng, mat));
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 0:
+			default:
+			}
+		}while(menu != 0);
+		
+		sc.close();
+	}
+
+}

@@ -1,0 +1,28 @@
+package _interface;
+
+class Person{
+	String name;
+	
+	Person(String name){
+		this.name = name;
+	}
+	
+	void give(Person target){
+		System.out.println(name + "(이)가 " + target.name + "에게 과자를 건네주다.");
+	}
+}
+
+public class Quiz {
+
+	public static void main(String[] args) {
+		Person p1 = new Person("홍길동");
+		Person p2 = new Person("김길동");
+		
+		Cat cat = new Cat("고양이");
+		
+		p1.give(p2);	// 홍길동이 김길동에게 먹을걸 주다
+
+		
+	}
+
+}

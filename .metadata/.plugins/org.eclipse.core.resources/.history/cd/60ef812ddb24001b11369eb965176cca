@@ -1,0 +1,22 @@
+package collection;
+
+import java.util.ArrayList;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		// All collections are written in generic form
+		// using generic, only that specific data type will be added to collection
+		// but there will be no need for casting
+		
+		// generic cannot be basic data types
+		// thus use the wrapper classes
+		
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		
+		arr.add(10);
+		arr.add(10.0);
+		
+	}
+
+}

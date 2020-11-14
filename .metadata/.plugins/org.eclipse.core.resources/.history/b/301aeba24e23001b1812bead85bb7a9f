@@ -1,0 +1,14 @@
+package exception;
+
+public class Ex03 {
+
+	public static void printArr(int[] arr) {
+		for(int a : arr)
+			System.out.println(a);
+	}
+	
+	public static void main(String[] args) {
+		int[] arr = new int[] {10, 20, 30, 40, 50};
+	}
+
+}

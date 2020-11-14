@@ -1,0 +1,35 @@
+package fileIO;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// File Output: writing data onto file
+		// File Input: reading data from file
+		
+		String path = "H:\\KG아이티뱅크\\자바\\JAVA 실습\\Day20\\fileIO.txt";
+		File file = new File(path);
+		
+		
+		try {
+			Scanner sc = new Scanner(file);
+			
+			while(sc.hasNext()) {
+				
+			}
+		}
+		catch(FileNotFoundException e) {
+			System.out.println("파일을 찾을 수 없습니다.");
+		}
+		catch(IOException e) {
+			System.out.println("입출력 에러 입니다.");
+		}
+
+	}
+
+}

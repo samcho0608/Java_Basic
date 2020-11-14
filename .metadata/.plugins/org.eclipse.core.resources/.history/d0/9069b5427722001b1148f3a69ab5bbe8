@@ -1,0 +1,56 @@
+package _abstract;
+
+class Dog extends Animal {
+
+	Dog(String name, int age, String type) {
+		super(name, age, type);
+	}
+	
+	@Override
+	void eat() {
+		System.out.println("뼈다귀를 씹는다.");
+	}
+}
+
+class Hamster extends Animal {
+	Hamster(String name, int age, String type) {
+		super(name, age, type);
+	}
+	
+	@Override
+	void eat() {
+		System.out.println("해바라기씨를 먹는다, 옴뇸뇸");
+	}
+}
+
+class Rabbit extends Animal {
+	Rabbit(String name, int age, String type) {
+		super(name, age, type);
+	}
+	
+	@Override
+	void eat() {
+		System.out.println("당근을 먹는다.");
+	}
+}
+
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		Cat cat = new Cat("고양이", 1, "먼치킨");
+		Dog dog = new Dog("강아지", 2, "치와와");
+		Hamster ham = new Hamster("햄스터", 4, "햄토리");
+		Rabbit rab = new Rabbit("토끼", 6, "설치류");
+		
+		Animal[] members = new Animal[] {
+				cat, dog, ham, rab
+		};
+		
+		for(Animal a : members) {
+			a.eat();
+		}
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package last;
+
+public class Student { // stores the student info
+
+}

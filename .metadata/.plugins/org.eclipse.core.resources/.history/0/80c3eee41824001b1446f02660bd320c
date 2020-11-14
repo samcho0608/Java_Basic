@@ -1,0 +1,17 @@
+package api;
+
+import java.util.Objects;
+
+class Person{}
+
+public class Ex03 {
+	
+	public static void main(String[] args) {
+		Person p1 = new Person();
+		Person p2;
+		
+		System.out.println(Objects.isNull(p1));
+//		System.out.println(Objects.isNull(p2));
+	}
+
+}

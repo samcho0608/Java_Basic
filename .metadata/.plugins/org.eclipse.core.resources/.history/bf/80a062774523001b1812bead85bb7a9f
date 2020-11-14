@@ -1,0 +1,19 @@
+package nestedClass;
+
+public class Person {
+	String name;
+	int age;
+	
+	String lungs = "Æó";
+	
+	Heart heart = new Heart();
+	class Heart {
+		void run() {
+			System.out.println(lungs + "Ç÷¾×À» °ø±ÞÇÕ´Ï´Ù.");
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

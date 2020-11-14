@@ -1,0 +1,57 @@
+package nestedClass;
+
+class Outer2{
+	private int out = 10;	// non-static so only initialized when an instance is created
+	private static int sout = 10;	// static so doesn't require an instance to be created first to use
+	
+	void showOut() {
+		System.out.println("==== 외부 비정적 메서드 ====");
+		System.out.println("외부 비정적 멤버 : " + out);
+		System.out.println("외부 정적 멤버: " + sout);
+		
+//		System.out.println("내부 멤버: " + in); inner class variable not accessible
+	}
+	
+	static void showOut_s() {
+		System.out.println("==== 외부 비정적 메서드 ====");
+//		System.out.println("외부 비정적 멤버 : " + out); Error: using non-static variable
+		System.out.println("외부 정적 멤버: " + sout);
+		
+//		System.out.println("내부 멤버: " + in); inner class variable not accessible
+		System.out.println("내부 멤버: " + Inner2.in2); // if the inner class variable is static it can be used.
+	}
+	
+	static class Inner2{
+		private int in = 20;
+		static int in2 = 20;
+		
+		void showIn() {
+//			System.out.println("외부 비정적 멤버 : " + out);  doens't work bc there is a non-static variable used
+			System.out.println("외부 비정적 멤버 : " + sout);
+			
+//			showOut(); non-static method cannot be called
+			showOut_s(); // static method can be called
+		}
+	}
+	
+	Inner2 in = new Inner2();
+	
+	
+}
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		Outer2 out = new Outer2();
+		
+		Outer2.showOut_s();	// outer static method
+		out.showOut();		// outer non-static method
+		
+		Outer2.Inner2 in  = new Outer2.Inner2();	// how to initialize static inner class
+												// Static inner classs doesn't need a help from outer class instance
+												// to be initialized.
+		in.showIn();
+
+	}
+
+}

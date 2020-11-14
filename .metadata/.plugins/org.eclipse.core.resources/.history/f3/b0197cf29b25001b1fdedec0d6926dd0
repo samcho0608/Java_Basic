@@ -1,0 +1,34 @@
+package last;
+
+import java.util.LinkedList;
+
+public class Control { // class actually controlling student class
+	LinkedList<Student> members = new LinkedList<Student>();
+	
+	void add(Student target) {
+		members.add(target);
+	}
+
+	boolean remove(String target) {
+		for(Student s : members) {
+			if(s.getName() == target) {
+				members.remove(s);
+				return true;
+			}
+		}
+		
+		return false;
+	}	
+	
+	void list() {
+		for(Student s : members)
+			System.out.println(s.getName());
+	}
+	
+	void search(String target) {
+		for(Student s : members) {
+			s.showInfo();
+		}
+	}
+	
+}

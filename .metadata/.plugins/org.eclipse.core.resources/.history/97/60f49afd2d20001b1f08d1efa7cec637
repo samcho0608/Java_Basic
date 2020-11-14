@@ -1,0 +1,64 @@
+package polymorphism;
+
+class Animal{
+	
+	void sleep() {
+		System.out.println("Zzzz...");
+	}
+	
+	void eat() {
+		System.out.println("³È³È");
+	}
+	
+	void speak() {
+		System.out.println("±×¸£¸£...");
+	}
+	
+	void attack() {
+		System.out.println("°ø°Ý!");
+	}
+}
+
+class Dog extends Animal{
+	void eat() {
+		System.out.println("Ãò¸£ ³È³È");
+	}
+	void speak() {
+		System.out.println("³Ä¿Ë");
+	}
+	void attack() {
+		System.out.println("¹°¾î¶â±â!");
+	}
+}
+
+class Cat extends Animal{
+	void eat() {
+		System.out.println("»À´Ù±Í ¾ÃÀ½");
+	}
+	void speak() {
+		System.out.println("¸Û¸Û");
+	}
+	
+	void attack() {
+		System.out.println("ÇÒÄû±â!");
+	}
+}
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		Animal dog = new Dog();
+		Animal cat = new Cat();
+		
+		dog.eat();
+		cat.eat();
+		
+		dog.speak();
+		cat.speak();
+		
+//		cat.attack(); // upcasted thus cannot use child class method
+		cat.attack();
+
+	}
+
+}

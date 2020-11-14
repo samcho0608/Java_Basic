@@ -1,0 +1,71 @@
+package _interface;
+
+interface USB {	// used to give a class a certain characteristic
+	// variables within an interface attains
+	// public static final characteristic
+	String type = "C타입";
+	
+	// methods within an interface attains
+	// public abstract
+	void connect();
+}
+
+class ElectricFan implements USB{
+	ElectricFan(){
+		
+	}
+	
+	@Override
+	public void connect() {
+		System.out.println("선풍기 연결, 충전 시작");
+	}
+}
+
+class SmartPhone implements USB{
+	@Override
+	public void connect() {
+		System.out.println("iPhone 연결, 64GB, 아이튠즈 실행!");	
+	}
+}
+
+class FlashMemory implements USB{
+	@Override
+	public void connect() {
+		System.out.println("USB 메모리 연결, 탐색기 G:\\ 열림");
+	}
+}
+
+class PC {
+	void usbRun(USB target) {
+		target.connect();
+	}
+}
+
+class Calculator {} // electronic device with an USB port
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		ElectricFan fan = new ElectricFan();
+		SmartPhone phone = new SmartPhone();
+		FlashMemory memory = new FlashMemory();
+		Calculator cal = new Calculator();
+		
+		PC pc = new PC();
+		
+		pc.usbRun(fan);
+		pc.usbRun(phone);
+		pc.usbRun(memory);
+//		pc.usbRun(cal);
+//		ㄴ> Calculator doesn't have the USB interface(or characteristic)
+		
+		System.out.print("선풍기 포트 타입: ");
+		System.out.println(fan.type);
+		
+//		fan.type = "B타입";
+//		ㄴ> interface member attains final characteristic
+		
+		
+	}
+
+}
